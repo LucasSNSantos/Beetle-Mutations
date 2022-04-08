@@ -21,9 +21,9 @@ public class Population
     private Beetle GenerateRandomBeetle()
     {
         Random rd = new Random();
-        var red = (float) rd.Next(0, 255);
-        var green = (float) rd.Next(0, 255);
-        var blue = (float) rd.Next(0, 255);
+        var red = (float) rd.Next(0, 254);
+        var green = (float) rd.Next(0, 254);
+        var blue = (float) rd.Next(0, 254);
         var beetle = new Beetle(red, green, blue);
         return beetle;
     }

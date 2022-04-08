@@ -17,11 +17,16 @@ public class NaturalSelection
         population = new Population(size);
     }
 
+
+    //F(n) = 100 - 0.1306 * (R + G + B)
     public float FitnessFunction(Beetle beetle)
     {
+        var r = beetle.Red;
+        var g = beetle.Green;
+        var b = beetle.Blue;
 
-        return 0;
-
+        float fitness = 100 - 0.1306f * (r + b + g);
+        return fitness;
     }
 
     public Beetle CrossoverBeetles(Beetle father, Beetle mother)
@@ -49,7 +54,6 @@ public class NaturalSelection
         }
         var blue = mutagen.Blue + mutationColor;
         return new Beetle(mutagen.Red, mutagen.Green, blue);
-
     }
 
 

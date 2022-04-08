@@ -20,9 +20,23 @@ namespace BeetleGenetics
     /// </summary>
     public partial class MainWindow : Window
     {
+        private NaturalSelection Darwin;
         public MainWindow()
         {
             InitializeComponent();
+            Darwin = new NaturalSelection();
+        }
+
+        private void Generate_Population(object sender, RoutedEventArgs e)
+        {
+            int individuals = 10;
+            var value = IndividualsNumber.SelectedValue;
+            if(value != null)
+            {
+                var individualNumber = value.ToString();
+                individuals = int.Parse(individualNumber.Split()[1]);
+            }
+            Darwin.StartPopulation(individuals);
         }
     }
 }

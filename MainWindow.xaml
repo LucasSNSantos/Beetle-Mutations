@@ -5,8 +5,32 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:BeetleGenetics"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow"  Height="450" Width="800">
     <Grid>
+        <Button Content="Generate Population" HorizontalAlignment="Left" Margin="31,355,0,0" VerticalAlignment="Top" Click="Generate_Population"/>
+        <ComboBox Name="IndividualsNumber" HorizontalAlignment="Left" Margin="31,306,0,0" VerticalAlignment="Top" Width="120">
+            <ComboBoxItem>10</ComboBoxItem>
+            <ComboBoxItem>20</ComboBoxItem>
+            <ComboBoxItem>50</ComboBoxItem>
+            <ComboBoxItem>100</ComboBoxItem>
+        </ComboBox>
+
+        <Canvas Height="450" Width="800" Name="myCanvas">
+            <Line
+                X1="0" Y1="295"
+                X2="800" Y2="295"
+                Stroke="Black"
+                StrokeThickness="3"/>
+            <Rectangle Canvas.Left="165" Canvas.Top="225" Height="20" Width="20">
+                <Rectangle.Fill>
+                    <SolidColorBrush>
+                        <SolidColorBrush.Color>
+                            <Color A="255" R="200" G="220" B="250" />
+                        </SolidColorBrush.Color>
+                    </SolidColorBrush>
+                </Rectangle.Fill>
+            </Rectangle>
+        </Canvas>
 
     </Grid>
 </Window>
